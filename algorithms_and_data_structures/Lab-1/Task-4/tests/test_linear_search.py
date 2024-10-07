@@ -17,8 +17,10 @@ class TestLinearSearch(unittest.TestCase):
         """
         Проверка корректности работы линейного поиска.
         """
-        self.assertEqual(linear_search([10, 20, 30, 40], 30), [2])
-        self.assertEqual(linear_search([10, 20, 30, 40], 50), -1)
+        self.assertEqual(linear_search(['10', '20', '30', '40'], '30'), ['3'])
+        self.assertEqual(linear_search(['10', '20', '30', '40'], '50'), '-1')
+        self.assertEqual(linear_search(['10', '20', '30', '40', '40'], '40'), ['4', '5'])
+
 
 if __name__ == '__main__':
     unittest.main()
