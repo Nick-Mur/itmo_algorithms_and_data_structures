@@ -53,7 +53,7 @@ def merge_sort_with_indices(array, left, right):
 
 
 if __name__ == '__main__':
-    _, massive = read_input()
+    _, massive = read_input(task=2)
     array = list(map(int, massive.split()))
     merge_sort_with_indices(array, 0, len(array) - 1)
-    write_output(' '.join(list(map(str, array))))
+    write_output(2, ' '.join(list(map(str, array))))

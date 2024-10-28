@@ -27,7 +27,7 @@ def binary_search(array, target):
     return -1
 
 if __name__ == '__main__':
-    _, massive, target = read_input()
+    _, massive, target = read_input(task=4)
     array = list(map(int, massive.split()))
     result = binary_search(array, int(target))
-    write_output(str(result))
+    write_output(4, str(result))

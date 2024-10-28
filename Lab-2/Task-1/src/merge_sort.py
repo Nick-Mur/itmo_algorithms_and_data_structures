@@ -51,7 +51,7 @@ def merge_sort(array, left, right):
     merge(array, left, middle, right)
 
 if __name__ == '__main__':
-    _, massive = read_input()
+    _, massive = read_input(task=1)
     array = list(map(int, massive.split()))
     merge_sort(array, 0, len(array) - 1)
-    write_output(' '.join(map(str, array)))
+    write_output(1, ' '.join(map(str, array)))

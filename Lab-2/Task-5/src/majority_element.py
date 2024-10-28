@@ -29,8 +29,8 @@ def majority_element(array):
     return None
 
 if __name__ == '__main__':
-    _, massive = read_input()
+    _, massive = read_input(task=5)
     array = list(map(int, massive.split()))
     result = majority_element(array)
     output = str(result) if result is not None else "Нет элемента большинства"
-    write_output(output)
+    write_output(5, output)

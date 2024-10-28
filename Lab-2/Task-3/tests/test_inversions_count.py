@@ -9,31 +9,31 @@ from inversions_count import merge_sort_and_count
 
 class TestInversionsCount(unittest.TestCase):
 
-    def test_inversions(self):
+    def test_should_inversions(self):
         array = [1, 20, 6, 4, 5]
         temp_array = [0] * len(array)
         result = merge_sort_and_count(array, temp_array, 0, len(array) - 1)
         self.assertEqual(result, 5)
 
-    def test_no_inversions(self):
+    def test_should_no_inversions(self):
         array = [1, 2, 3, 4, 5]
         temp_array = [0] * len(array)
         result = merge_sort_and_count(array, temp_array, 0, len(array) - 1)
         self.assertEqual(result, 0)
 
-    def test_reverse_sorted(self):
+    def test_should_reverse_sorted(self):
         array = [5, 4, 3, 2, 1]
         temp_array = [0] * len(array)
         result = merge_sort_and_count(array, temp_array, 0, len(array) - 1)
         self.assertEqual(result, 10)
 
-    def test_empty_array(self):
+    def test_should_empty_array(self):
         array = []
         temp_array = []
         result = merge_sort_and_count(array, temp_array, 0, len(array) - 1)
         self.assertEqual(result, 0)
 
-    def test_invalid_arguments(self):
+    def test_should_invalid_arguments(self):
         # Тесты для некорректных типов аргументов
         with self.assertRaises(TypeError):
             merge_sort_and_count(None, [], 0, 1)

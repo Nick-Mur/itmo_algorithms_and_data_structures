@@ -75,8 +75,8 @@ def merge_sort_and_count(array, temp_array, left, right):
     return inv_count
 
 if __name__ == '__main__':
-    _, massive = read_input()
+    _, massive = read_input(task=3)
     array = list(map(int, massive.split()))
     temp_array = [0] * len(array)
     inv_count = merge_sort_and_count(array, temp_array, 0, len(array) - 1)
-    write_output(str(inv_count))
+    write_output(3, str(inv_count))

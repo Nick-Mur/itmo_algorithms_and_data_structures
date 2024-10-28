@@ -8,32 +8,32 @@ from merge_sort_with_indices import merge_sort_with_indices
 
 class TestMergeSortWithIndices(unittest.TestCase):
 
-    def test_basic_sort_with_indices(self):
+    def test_should_basic_sort_with_indices(self):
         array = [9, 7, 5, 8]
         merge_sort_with_indices(array, 0, len(array) - 1)
         self.assertEqual(array, [5, 7, 8, 9])
 
-    def test_already_sorted(self):
+    def test_should_already_sorted(self):
         array = [1, 2, 3, 4]
         merge_sort_with_indices(array, 0, len(array) - 1)
         self.assertEqual(array, [1, 2, 3, 4])
 
-    def test_reverse_sorted(self):
+    def test_should_reverse_sorted(self):
         array = [10, 9, 8, 7]
         merge_sort_with_indices(array, 0, len(array) - 1)
         self.assertEqual(array, [7, 8, 9, 10])
 
-    def test_single_element(self):
+    def test_should_single_element(self):
         array = [1]
         merge_sort_with_indices(array, 0, len(array) - 1)
         self.assertEqual(array, [1])
 
-    def test_empty_array(self):
+    def test_should_empty_array(self):
         array = []
         merge_sort_with_indices(array, 0, len(array) - 1)
         self.assertEqual(array, [])
 
-    def test_invalid_arguments(self):
+    def test_should_invalid_arguments(self):
         with self.assertRaises(TypeError):
             merge_sort_with_indices(None, 0, 1)
         with self.assertRaises(TypeError):
