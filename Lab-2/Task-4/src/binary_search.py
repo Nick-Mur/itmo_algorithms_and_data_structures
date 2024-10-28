@@ -1,3 +1,10 @@
+# binary_search.py
+
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
+from utils import read_input, write_output
+
 def binary_search(array, target):
     """
     Бинарный поиск элемента в отсортированном массиве.
@@ -19,11 +26,8 @@ def binary_search(array, target):
             right = middle - 1
     return -1
 
-
 if __name__ == '__main__':
-    with open('input.txt') as f:
-        n, massive, target = f.readlines()
+    _, massive, target = read_input()
     array = list(map(int, massive.split()))
-    result = binary_search(array, int(target.strip()))
-    with open('output.txt', 'w') as f:
-        print(result, file=f)
+    result = binary_search(array, int(target))
+    write_output(str(result))

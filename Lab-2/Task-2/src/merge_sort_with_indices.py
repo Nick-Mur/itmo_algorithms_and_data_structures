@@ -1,3 +1,11 @@
+# merge_sort_with_indices.py
+
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
+from utils import read_input, write_output
+
+
 def merge_with_indices(array, left, middle, right):
     """
     Слияние с выводом индексов подмассивов и их значений.
@@ -45,9 +53,7 @@ def merge_sort_with_indices(array, left, right):
 
 
 if __name__ == '__main__':
-    with open('input.txt') as f:
-        n, massive = f.readlines()
+    _, massive = read_input()
     array = list(map(int, massive.split()))
     merge_sort_with_indices(array, 0, len(array) - 1)
-    with open('output.txt', 'w') as f:
-        print(' '.join(list(map(str, array))), file=f)
+    write_output(' '.join(list(map(str, array))))

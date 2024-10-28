@@ -1,3 +1,9 @@
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
+from utils import *
+
+
 def insertion_sort(arr):
     """
     Функция для сортировки массива методом вставки.
@@ -19,8 +25,6 @@ def insertion_sort(arr):
 
 
 if __name__ == '__main__':
-    with open('input.txt') as f:
-        n, massive = f.readlines()
+    _, massive = read_input()
     array = insertion_sort(list(map(int, massive.split())))
-    with open('output.txt', 'w') as f:
-        print(' '.join(list(map(str, array))), file=f)
+    write_output(' '.join(map(str, array)))

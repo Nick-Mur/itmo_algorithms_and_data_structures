@@ -1,3 +1,10 @@
+# merge_sort.py
+
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
+from utils import read_input, write_output
+
 def merge(array, left, middle, right):
     """
     Функция слияния двух отсортированных подмассивов в один.
@@ -23,7 +30,6 @@ def merge(array, left, middle, right):
             array[k] = right_subarray[j]
             j += 1
 
-
 def merge_sort(array, left, right):
     """
     Функция рекурсивной сортировки массива методом слияния.
@@ -44,12 +50,8 @@ def merge_sort(array, left, right):
     merge_sort(array, middle + 1, right)
     merge(array, left, middle, right)
 
-
-
 if __name__ == '__main__':
-    with open('input.txt') as f:
-        n, massive = f.readlines()
+    _, massive = read_input()
     array = list(map(int, massive.split()))
     merge_sort(array, 0, len(array) - 1)
-    with open('output.txt', 'w') as f:
-        print(' '.join(list(map(str, array))), file=f)
+    write_output(' '.join(map(str, array)))

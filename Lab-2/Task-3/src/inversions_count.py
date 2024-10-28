@@ -1,3 +1,10 @@
+# merge_sort_and_count.py
+
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
+from utils import read_input, write_output
+
 def merge_and_count(array, temp_array, left, middle, right):
     """
     Слияние двух подмассивов с подсчетом инверсий.
@@ -34,11 +41,10 @@ def merge_and_count(array, temp_array, left, middle, right):
         j += 1
         k += 1
 
-    for i in range(left, right + 1):
-        array[i] = temp_array[i]
+    for idx in range(left, right + 1):
+        array[idx] = temp_array[idx]
 
     return inv_count
-
 
 def merge_sort_and_count(array, temp_array, left, right):
     """
@@ -68,12 +74,9 @@ def merge_sort_and_count(array, temp_array, left, right):
 
     return inv_count
 
-
 if __name__ == '__main__':
-    with open('input.txt') as f:
-        n, massive = f.readlines()
+    _, massive = read_input()
     array = list(map(int, massive.split()))
     temp_array = [0] * len(array)
     inv_count = merge_sort_and_count(array, temp_array, 0, len(array) - 1)
-    with open('output.txt', 'w') as f:
-        print(inv_count, file=f)
+    write_output(str(inv_count))

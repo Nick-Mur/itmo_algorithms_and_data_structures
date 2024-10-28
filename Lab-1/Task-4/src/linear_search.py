@@ -1,3 +1,11 @@
+# linear_search.py
+
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
+from utils import read_input, write_output
+
+
 def linear_search(arr, v):
     """
     Функция для поиска элемента в массиве с использованием линейного поиска.
@@ -16,9 +24,7 @@ def linear_search(arr, v):
 
 
 if __name__ == '__main__':
-    with open('input.txt') as f:
-        massive, v = f.readlines()
-    result = linear_search(massive.split(), v)
-    result = ', '.join(result) if isinstance(result, list) else '-1'
-    with open('output.txt', 'w') as f:
-        print(result, file=f)
+    lines = read_input()
+    massive, v = lines
+    result = linear_search(list(map(int, massive.split())), int(v))
+    write_output(', '.join(result))
