@@ -30,6 +30,7 @@ def merge(array, left, middle, right):
             array[k] = right_subarray[j]
             j += 1
 
+
 def merge_sort(array, left, right):
     """
     Функция рекурсивной сортировки массива методом слияния.
@@ -49,6 +50,7 @@ def merge_sort(array, left, right):
     merge_sort(array, left, middle)
     merge_sort(array, middle + 1, right)
     merge(array, left, middle, right)
+
 
 if __name__ == '__main__':
     _, massive = read_input(task=1)
