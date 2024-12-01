@@ -1,7 +1,7 @@
 import os
 from Lab3.utils.IOHandler import IOHandler
 from Lab3.Task1.src.Sorter import Sorter
-
+from Lab3.utils.consts import *
 
 def main():
     """
@@ -9,12 +9,12 @@ def main():
     """
     # Определение путей к файлам
     current_dir = os.path.dirname(os.path.abspath(__file__))
-    txtf_dir = IOHandler.get_path(current_dir, 'txtf')
-    input_path = IOHandler.get_path(txtf_dir, 'input.txt')
-    output_quick_path = IOHandler.get_path(txtf_dir, 'output_quick.txt')
-    output_randomized_quick_path = IOHandler.get_path(txtf_dir, 'output_randomized_quick.txt')
-    output_randomized_p3_quick_path = IOHandler.get_path(txtf_dir, 'output_randomized_p3_quick.txt')
-    output_merge_sort_path = IOHandler.get_path(txtf_dir, 'output_merge_sort.txt')
+    txtf_dir = IOHandler.get_path(current_dir, TXT_DIR)
+    input_path = IOHandler.get_path(txtf_dir, INPUT_FILES_DIR, 'input.txt')
+    output_quick_path = IOHandler.get_path(txtf_dir, OUTPUT_FILES_DIR, 'output_quick.txt')
+    output_randomized_quick_path = IOHandler.get_path(txtf_dir, OUTPUT_FILES_DIR, 'output_randomized_quick.txt')
+    output_randomized_p3_quick_path = IOHandler.get_path(txtf_dir, OUTPUT_FILES_DIR, 'output_randomized_p3_quick.txt')
+    output_merge_sort_path = IOHandler.get_path(txtf_dir, OUTPUT_FILES_DIR, 'output_merge_sort.txt')
 
     # Чтение входных данных
     arr = IOHandler.read_list(input_path)
