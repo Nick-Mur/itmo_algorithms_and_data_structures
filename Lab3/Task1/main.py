@@ -2,7 +2,10 @@ import os
 from Lab3.utils.IOHandler import IOHandler
 from Lab3.Task1.src.Sorter import Sorter
 from Lab3.utils.consts import *
+from Lab3.utils.decorate import *
 
+
+@measure_time_and_memory
 def main():
     """
     Основная функция для выполнения сортировок и записи результатов.

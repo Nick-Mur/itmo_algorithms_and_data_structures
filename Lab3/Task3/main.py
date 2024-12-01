@@ -6,8 +6,10 @@ import os
 from Lab3.utils.IOHandler import IOHandler
 from Lab3.Task3.src.ScarecrowSortChecker import ScarecrowSortChecker
 from Lab3.utils.consts import *
+from Lab3.utils.decorate import *
 
 
+@measure_time_and_memory
 def main():
     """
     Основная функция для проверки возможности сортировки массива методом "Сортировка пугалом"

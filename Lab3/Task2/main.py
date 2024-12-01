@@ -6,8 +6,10 @@ import os
 from Lab3.utils.IOHandler import IOHandler
 from Lab3.Task2.src.AntiQuickSortGenerator import AntiQuickSortGenerator
 from Lab3.utils.consts import *
+from Lab3.utils.decorate import *
 
 
+@measure_time_and_memory
 def main():
     """
     Основная функция для генерации перестановки и записи результата.
