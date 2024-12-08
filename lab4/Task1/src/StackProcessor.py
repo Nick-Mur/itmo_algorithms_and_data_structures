@@ -3,8 +3,6 @@
 """Модуль для обработки операций со стеком."""
 
 from lab4.utils.IOHandler import IOHandler
-from lab4.utils.consts import *
-import os
 
 
 class StackProcessor:
