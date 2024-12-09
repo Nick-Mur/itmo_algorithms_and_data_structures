@@ -1,5 +1,3 @@
-# Lab5/Task2/src/TreeHeightCalculator.py
-
 """Модуль для вычисления высоты дерева по списку родителей."""
 
 class TreeHeightCalculator:

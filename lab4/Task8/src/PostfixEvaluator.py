@@ -1,9 +1,6 @@
-# Task8/src/PostfixEvaluator.py
-
 """Модуль для вычисления выражений в постфиксной записи."""
 
 from lab4.utils.IOHandler import IOHandler
-from lab4.utils.consts import *
 
 
 class PostfixEvaluator:

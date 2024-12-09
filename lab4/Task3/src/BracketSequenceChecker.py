@@ -8,7 +8,7 @@ class BracketSequenceChecker:
 
     def __init__(self):
         """Инициализация сопоставления скобок."""
-        self.matching_brackets = {')': '(', ']': '['}
+        self.matching_brackets = {')': '(', ']': '[', '}': '{'}
 
     def is_valid_sequence(self, sequence):
         """
@@ -20,9 +20,9 @@ class BracketSequenceChecker:
         stack = []
 
         for char in sequence:
-            if char in "([":  # Открывающая скобка
+            if char in "([{":  # Открывающая скобка
                 stack.append(char)
-            elif char in ")]":  # Закрывающая скобка
+            elif char in ")]}":  # Закрывающая скобка
                 if stack and stack[-1] == self.matching_brackets[char]:
                     stack.pop()
                 else:

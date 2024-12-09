@@ -1,5 +1,3 @@
-# Task4/src/BracketChecker.py
-
 """Модуль для проверки скобок в строке."""
 
 from lab4.utils.IOHandler import IOHandler

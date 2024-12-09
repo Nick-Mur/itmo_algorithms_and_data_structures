@@ -1,5 +1,3 @@
-# Task3/tests/tests.py
-
 """Тесты для BracketSequenceChecker."""
 
 import unittest
