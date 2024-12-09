@@ -1,5 +1,3 @@
-# Lab5/Task6/src/PriorityQueueProcessor.py
-
 """Модуль для обработки операций с приоритетной очередью."""
 
 import heapq
